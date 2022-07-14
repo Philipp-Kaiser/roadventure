@@ -2,6 +2,14 @@ import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 
 export default function MapInstance() {
+  const fetchRoadtrips = async () => {
+    const res = await fetch(`/api/roadtrips`)
+    const data = await res.json()
+    console.log(data)
+  }
+
+  fetchRoadtrips()
+
   return (
     <>
       <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false} style={{ height: 400, width: '100%' }}>

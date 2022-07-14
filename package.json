@@ -9,8 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-regular-svg-icons": "^6.1.1",
     "@types/leaflet": "^1.7.11",
     "leaflet": "^1.8.0",
+    "mongoose": "^6.4.4",
     "next": "12.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
