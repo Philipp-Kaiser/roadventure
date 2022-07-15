@@ -1,10 +1,13 @@
 import mongoose from 'mongoose'
 
-const roadtripSchema = new mongoose.Schema({
+const { Schema } = mongoose
+mongoose.Promise = global.Promise
+
+const roadtripSchema = new Schema({
   name: { type: String, required: true },
   locations: Array,
   costs: Array,
 })
-const Roadtrip = mongoose.models.Roadtrip || mongoose.model('roadtrips', roadtripSchema)
+const Roadtrip = mongoose.models.Roadtrip || mongoose.model('Roadtrip', roadtripSchema)
 
 export default Roadtrip
