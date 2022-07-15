@@ -1,5 +1,5 @@
-import { createRoadtrip, deleteRoadtrip, getAllRoadtrips, updateRoadtrip } from './controller/roadtrips.controller.js'
-import dbConnect from './dbConnect'
+import { createRoadtrip, deleteRoadtrip, getRoadtrips, updateRoadtrip } from '../controller/roadtrip.controller.js'
+import dbConnect from '../lib/dbConnect'
 
 export default async function handler(req, res) {
   const { method } = req
@@ -8,7 +8,7 @@ export default async function handler(req, res) {
 
   switch (method) {
     case 'GET':
-      getAllRoadtrips(req, res)
+      getRoadtrips(req, res)
       break
 
     case 'POST':
